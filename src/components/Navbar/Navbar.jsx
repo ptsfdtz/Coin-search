@@ -7,7 +7,7 @@ const Navbar = () => {
         <div>
             <div className='navbar'>
                 <FaCoins className='icon' />
-                <a href="/"><h1>Coin <span className='purple'>Search</span></h1></a>
+                <a href="/Coin-search"><h1>Coin <span className='purple'>Search</span></h1></a>
             </div>
         </div>
     )
