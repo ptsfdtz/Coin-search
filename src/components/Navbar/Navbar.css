@@ -12,3 +12,10 @@
 .purple {
     color: #6900ff;
 }
+
+a {
+    text-decoration: none;
+    /* Remove underline from all links */
+    color: inherit;
+    /* Optional: Inherit color from parent element */
+}
