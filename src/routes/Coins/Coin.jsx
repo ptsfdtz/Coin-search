@@ -13,7 +13,7 @@ const Coin = () => {
         axios.get(url).then((res) => setCoin(res.data))
             .catch((err) => console.log(err));
     }, [url]);
-
+    
     const marketData = coin.market_data;
 
     return (

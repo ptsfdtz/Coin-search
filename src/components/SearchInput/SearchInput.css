@@ -1,0 +1,41 @@
+.search-container{
+    position: relative;
+    max-width: 150px;
+    margin-top: 10px;
+}
+
+.search-container .search-input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #6900ff;
+    border-radius: 8px;
+    background-color: #18191b;
+}
+
+.search-container .input-label {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    text-transform: uppercase;
+    color: gray;
+}
+
+.search-container input:valid ~ span,
+.search-container input:focus ~ span {
+    color: #6900ff;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 14px;
+    padding: 0 10px;
+    background: #18191b;
+    border-left: #6900ff 2px solid;
+    border-right: #6900ff 2px solid;
+    letter-spacing: 3px;
+    transition: color 0.3s ease, transform 0.5s ease, font-size 0.3s ease;
+}
+
+
+.search-container input:focus {
+    outline: none; 
+    border-color: #6900ff; 
+}
