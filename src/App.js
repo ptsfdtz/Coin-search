@@ -24,8 +24,9 @@ function App() {
   }, []);
 
   const filteredCoins = coins.filter(coin =>
-    coin.name.toLowerCase().includes(coinName.toLowerCase())
-  );
+    coin.name.toLowerCase().includes(coinName.toLowerCase()) ||
+    coin.symbol.toLowerCase().includes(coinName.toLowerCase())
+);
 
   return (
     <>
