@@ -1,128 +1,119 @@
 .coin-container .content {
-    max-width: 740px;
-    width: 90%;
-    margin: 1rem auto;
-    padding: .7rem 1rem;
-    display: flex;
-    border-radius: 10px;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
-    flex-direction: column;
-    background-color: #26272b;
+  max-width: 740px;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 0.7rem 1rem;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  background-color: #26272b;
 }
 
 .rank {
-    margin: .5 0;
+  margin: 0.5 0;
 }
 
 .rank .rank-btn {
-    border: none;
-    border-radius: 5px;
-    box-shadow:
-        0 0 5px rgba(105, 0, 255, 0.5),
-        0 0 10px rgba(105, 0, 255, 0.5),
-        0 0 15px rgba(105, 0, 255, 0.3);
-    background-color: #6900ff;
-    color: #fff;
-    padding: 2px 4px;
-    transition: box-shadow 0.3s ease;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(105, 0, 255, 0.5), 0 0 10px rgba(105, 0, 255, 0.5),
+    0 0 15px rgba(105, 0, 255, 0.3);
+  background-color: #6900ff;
+  color: #fff;
+  padding: 2px 4px;
+  transition: box-shadow 0.3s ease;
 }
 
 .rank .rank-btn:hover {
-    box-shadow:
-        0 0 10px rgba(105, 0, 255, 0.7),
-        0 0 20px rgba(105, 0, 255, 0.5),
-        0 0 30px rgba(105, 0, 255, 0.4);
+  box-shadow: 0 0 10px rgba(105, 0, 255, 0.7), 0 0 20px rgba(105, 0, 255, 0.5),
+    0 0 30px rgba(105, 0, 255, 0.4);
 }
 
-
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 td,
 th {
-    padding: 8px;
-    text-align: center;
-    margin: 0;
+  padding: 8px;
+  text-align: center;
+  margin: 0;
 }
 
 th {
-    background-color: #444;
-    color: #fff;
-    border: #26272b solid 2px;
+  background-color: #444;
+  color: #fff;
+  border: #26272b solid 2px;
 }
 
 @media screen and (max-width: 768px) {
+  td,
+  th {
+    font-size: 14px;
+  }
 
-    td,
-    th {
-        font-size: 14px;
-    }
+  th {
+    background-color: #444;
+    padding: 10px;
+  }
 
-    th {
-        background-color: #444;
-        padding: 10px;
-    }
-
-    .hide-on-mobile {
-        display: none;
-    }
+  .hide-on-mobile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
-
-    td,
-    th {
-        font-size: 12px;
-    }
+  td,
+  th {
+    font-size: 12px;
+  }
 }
 
-
 .info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .info .coin-heading {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 img {
-    margin-right: 10%;
+  margin-right: 10%;
 }
 
 .info .coin-price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
 }
 
 .stats .row {
-    border-bottom: #fff solid 1px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
+  border-bottom: #fff solid 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
 @media screen and (max-width: 768px) {
+  .stats .row {
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+  }
 
-    .stats .row {
-        flex-direction: column;
-        align-items: center;
-        font-size: 14px;
-    }
-
-    .stats .row h4,
-    .stats .row p {
-        width: 100%;
-        margin: 0;
-    }
+  .stats .row h4,
+  .stats .row p {
+    width: 100%;
+    margin: 0;
+  }
 }

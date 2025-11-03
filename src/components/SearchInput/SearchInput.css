@@ -1,65 +1,64 @@
-.search-container{
-    position: relative;
-    max-width: 150px;
-    margin-top: 10px;
+.search-container {
+  position: relative;
+  max-width: 150px;
+  margin-top: 10px;
 }
 
 .search-container .input-label {
-    position: absolute;
-    left: 0;
-    padding: 10px;
-    pointer-events: none;
-    color: gray;
-    font-size: 16px;
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  color: gray;
+  font-size: 16px;
 }
 
 .search-container input:valid ~ span,
 .search-container input:focus ~ span {
-    color: #6900ff;
-    transform: translateX(12px) translateY(-7px);
-    font-size: 14px;
-    padding: 0 10px;
-    background: #18191b;
-    border-left: #6900ff 2px solid;
-    border-right: #6900ff 2px solid;
-    letter-spacing: 3px;
-    transition: color 0.3s ease, transform 0.5s ease, font-size 0.3s ease;
+  color: #6900ff;
+  transform: translateX(12px) translateY(-7px);
+  font-size: 14px;
+  padding: 0 10px;
+  background: #18191b;
+  border-left: #6900ff 2px solid;
+  border-right: #6900ff 2px solid;
+  letter-spacing: 3px;
+  transition: color 0.3s ease, transform 0.5s ease, font-size 0.3s ease;
 }
 
-
 .search-container input:focus {
-    outline: none; 
-    border-color: #6900ff; 
+  outline: none;
+  border-color: #6900ff;
 }
 
 .search-container .search-input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #6900ff;
-    border-radius: 8px;
-    background-color: #18191b;
-    color: white;
-    font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #6900ff;
+  border-radius: 8px;
+  background-color: #18191b;
+  color: white;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 768px) {
-    .search-container .search-input {
-        padding: 8px; 
-        font-size: 14px; 
-        border-radius: 5px;
-    }
+  .search-container .search-input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
 
-    .search-container {
-        padding: 5px;
-    }
+  .search-container {
+    padding: 5px;
+  }
 
-    .search-container input:valid ~ span,
-    .search-container input:focus ~ span {
-        transform: translateX(24px) translateY(-5px); 
-        font-size: 12px; 
-        padding: 0 8px; 
-        letter-spacing: 2px; 
-        border-left: #6900ff 2px solid;
-        border-right: #6900ff 2px solid;
-    }
+  .search-container input:valid ~ span,
+  .search-container input:focus ~ span {
+    transform: translateX(24px) translateY(-5px);
+    font-size: 12px;
+    padding: 0 8px;
+    letter-spacing: 2px;
+    border-left: #6900ff 2px solid;
+    border-right: #6900ff 2px solid;
+  }
 }
