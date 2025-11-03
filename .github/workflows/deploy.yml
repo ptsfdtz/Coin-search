@@ -8,7 +8,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
 
@@ -30,8 +30,8 @@ jobs:
       - name: Deploy to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
+          branch: gh-pages
+          folder: build
           clean: true
           commit-message: Deploy from GitHub Actions
           token: ${{ secrets.GITHUB_TOKEN }}
