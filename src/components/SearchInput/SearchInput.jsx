@@ -1,20 +1,20 @@
-import React from "react";
+import { FaSearch, FaTimes } from "react-icons/fa";
 import "./SearchInput.css";
 
-const SearchInput = ({ coinName, setCoinName }) => {
-  return (
+const SearchInput = ({ query, onQueryChange }) => (
     <div className="search-container">
+      <FaSearch aria-hidden="true" className="search-icon" />
+      <label className="sr-only" htmlFor="coin-search">Search coins</label>
       <input
-        type="text"
-        required
+        id="coin-search"
+        type="search"
         className="search-input"
-        placeholder={coinName || ""}
-        value={coinName}
-        onChange={(e) => setCoinName(e.target.value)}
+        placeholder="Search coins"
+        value={query}
+        onChange={(event) => onQueryChange(event.target.value)}
       />
-      <span className="input-label">Coin Name</span>
+      {query && <button className="clear-search" type="button" aria-label="Clear search" onClick={() => onQueryChange("")}><FaTimes aria-hidden="true" /></button>}
     </div>
-  );
-};
+);
 
 export default SearchInput;

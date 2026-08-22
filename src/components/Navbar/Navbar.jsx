@@ -1,19 +1,19 @@
-import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FaCoins } from "react-icons/fa";
 import SearchInput from "../SearchInput/SearchInput";
 import "./Navbar.css";
 
-const Navbar = ({ coinName, setCoinName }) => {
+const Navbar = ({ query, onQueryChange }) => {
+  const isMarketPage = useLocation().pathname === "/";
+
   return (
-    <div className="navbar">
-      <FaCoins className="icon" />
-      <a href="/Coin-search">
-        <h1 className="title">
-          Coin <span className="purple">Search</span>
-        </h1>
-      </a>
-      <SearchInput coinName={coinName} setCoinName={setCoinName} />
-    </div>
+    <header className="navbar">
+      <Link className="brand" to="/" aria-label="Coin search home">
+        <FaCoins aria-hidden="true" />
+        <span>Coin<span>Search</span></span>
+      </Link>
+      {isMarketPage && <SearchInput query={query} onQueryChange={onQueryChange} />}
+    </header>
   );
 };
 

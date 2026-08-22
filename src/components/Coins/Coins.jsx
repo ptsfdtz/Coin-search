@@ -1,33 +1,19 @@
-import React from "react";
 import CoinItem from "../CoinItem/CoinItem";
 import { Link } from "react-router-dom";
 import "./Coins.css";
 
-const Coins = ({ coins }) => {
+const Coins = ({ coins, status, error, query, onRetry }) => {
+  if (status === "loading") return <div className="market-state" role="status">Loading market data...</div>;
+  if (status === "error") return <div className="market-state"><strong>{error}</strong><button type="button" onClick={onRetry}>Try again</button></div>;
+
   return (
-    <div className="container">
-      <div>
-        <div className="heading">
-          <p>#</p>
-          <p className="coin-name">Coin</p>
-          <p>Price</p>
-          <p>24h</p>
-          <p className="hide-mobile">Volume</p>
-          <p className="hide-mobile">Market Cap</p>
-        </div>
-        {coins && coins.length > 0 ? (
-          coins.map((coin) => (
-            <Link to={`/coin/${coin.id}`} key={coin.id}>
-              <CoinItem coins={coin} />
-            </Link>
-          ))
-        ) : (
-          <div className="no-coins">
-            <div className="no-coins-text">No coins found</div>
-          </div>
-        )}
+    <section className="market" aria-label="Cryptocurrency markets">
+      <div className="market-heading"><h1>Top Cryptocurrencies</h1><p>{coins.length} coins</p></div>
+      <div className="coin-table">
+        <div className="coin-row table-header" aria-hidden="true"><span>#</span><span>Asset</span><span>Price</span><span>24h</span><span className="hide-mobile">Volume</span><span className="hide-mobile">Market cap</span></div>
+        {coins.length ? coins.map((coin) => <Link className="coin-link" to={`/coin/${coin.id}`} key={coin.id}><CoinItem coin={coin} /></Link>) : <div className="empty-state">No assets match "{query}".</div>}
       </div>
-    </div>
+    </section>
   );
 };
 
